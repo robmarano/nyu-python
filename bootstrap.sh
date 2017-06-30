@@ -7,6 +7,10 @@ apt-get install python3 --assume-yes
 apt-get install python3-venv --assume-yes
 apt-get install bpython --assume-yes
 
+# Pip3
+#apt-get install python3-pip --assume-yes
+#pip3 install --upgrade pip3
+
 
 export RUN_USER="ubuntu"
 export RUNUSER_PROG="/sbin/runuser"
