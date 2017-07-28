@@ -172,3 +172,5 @@ Module.symvers
 Mkfile.old
 dkms.conf
 a.out
+
+__pycache__
