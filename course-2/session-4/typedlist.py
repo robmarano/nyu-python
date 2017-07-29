@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 class TypedList:
+    ''' List-like class that allows only a single type of item '''
     def __init__(self, example_element, initial_list = []):
         self.type = type(example_element)
         if not isinstance(initial_list, list):
