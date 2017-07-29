@@ -29,7 +29,7 @@ class EquilateralTriangle(Triangle):
         return a**2 * 3**0.5 / 4
     def __init__(self,edge_length):
         super().__init__(edge_length)
-        self.__area = EquilateralTriangle.__Calc_area(self.edge_length)
+        self.__area = self.__class__.__Calc_area(self.edge_length)
         return
     @property
     def area(self):
