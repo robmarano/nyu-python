@@ -1,0 +1,24 @@
+"---\n- !!python/object/apply:collections.OrderedDict\n  - - - fname\n      - rob\n\
+  \    - - lname\n      - marano\n    - - month\n      - '03'\n    - - year\n    \
+  \  - '1971'\n    - - fcolor\n      - orange\n    - - fmovie\n      - amadeus\n-\
+  \ !!python/object/apply:collections.OrderedDict\n  - - - fname\n      - dean\n \
+  \   - - lname\n      - goldman\n    - - month\n      - '11'\n    - - year\n    \
+  \  - '1992'\n    - - fcolor\n      - turquois\n    - - fmovie\n      - amadeus\n\
+  - !!python/object/apply:collections.OrderedDict\n  - - - fname\n      - isobel\n\
+  \    - - lname\n      - scott\n    - - month\n      - '05'\n    - - year\n     \
+  \ - '1987'\n    - - fcolor\n      - red\n    - - fmovie\n      - crocodile dundee\n\
+  - !!python/object/apply:collections.OrderedDict\n  - - - fname\n      - misha\n\
+  \    - - lname\n      - chigogidze\n    - - month\n      - 08\n    - - year\n  \
+  \    - '1992'\n    - - fcolor\n      - hazel\n    - - fmovie\n      - intouchables\n\
+  - !!python/object/apply:collections.OrderedDict\n  - - - fname\n      - kai\n  \
+  \  - - lname\n      - yan\n    - - month\n      - '07'\n    - - year\n      - '1990'\n\
+  \    - - fcolor\n      - grey\n    - - fmovie\n      - focus\n- !!python/object/apply:collections.OrderedDict\n\
+  \  - - - fname\n      - sarah\n    - - lname\n      - black\n    - - month\n   \
+  \   - '11'\n    - - year\n      - '1987'\n    - - fcolor\n      - blue\n    - -\
+  \ fmovie\n      - robin hood men in tight\n- !!python/object/apply:collections.OrderedDict\n\
+  \  - - - fname\n      - ana\n    - - lname\n      - sula\n    - - month\n      -\
+  \ '04'\n    - - year\n      - '1988'\n    - - fcolor\n      - blue\n    - - fmovie\n\
+  \      - some like it hot\n- !!python/object/apply:collections.OrderedDict\n  -\
+  \ - - fname\n      - alice\n    - - lname\n      - topping\n    - - month\n    \
+  \  - '02'\n    - - year\n      - '1989'\n    - - fcolor\n      - green\n    - -\
+  \ fmovie\n      - 10 things\n"
