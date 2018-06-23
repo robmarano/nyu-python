@@ -1,8 +1,8 @@
 #from abc import ABC, abstractmethod
-from shapes import Quadrilateral
+from mylib.shapes import Quadrilateral as Q
 import logging
 
-class Rectangle(Quadrilateral):
+class Rectangle(Q.Quadrilateral):
     ''' Rectangle class '''
     def __init__(self,length=1, width=1):
         ''' Self constructor '''

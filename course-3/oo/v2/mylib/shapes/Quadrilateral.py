@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from shapes import Shape
+from mylib.shapes import Shape
 import logging
 
-class Quadrilateral(Shape):
+class Quadrilateral(Shape.Shape):
     ''' Quadrilateral class '''
     def __init__(self):
         ''' Self constructor '''
