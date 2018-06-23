@@ -7,6 +7,7 @@ __version__ = '0.1.0'
 __author__ = 'Rob Marano'
 
 import logging
+from pprint import pprint
 import pandas as pd
 import numpy as np
 
@@ -21,12 +22,6 @@ class Daily_Power(object):
 		''' Self constructor '''
 		super().__init__()
 		# place Daily_Power initialization here
-		#
-		# Create a time series of 2000 elements, one very five minutes starting on 1/1/2000
-		# https://pandas.pydata.org/pandas-docs/stable/timeseries.html#timeseries-offset-aliases
-		# http://pandas.pydata.org/pandas-docs/version/0.18.1/api.html#datetimelike-properties
-		# time = pd.Series(pd.date_range('1/1/2000', periods=24, freq='1H'))
-		# pprint(time.dt.hour)
 		times = pd.date_range(PLACEHOLDER_DATE, periods=PERIODS, freq=FREQUENCY)
 		hours = [x.hour for x in times]
 		self.power_readings = pd.DataFrame(hours, columns=['hours'])
@@ -58,12 +53,25 @@ class Daily_Power(object):
 		pass
 
 	def create_daily_power_readings(self):
-		self.power_readings['power'] = self.power_readings.apply(lambda row: self.power_formula(row['hours']), axis=1)
-		###self.power_readings['power'] = np.random.randint(0,5, size=len(self.power_readings))
-		#print(self.power_readings)
+		self.power_readings['power'] = self.power_readings.apply(lambda row: self.calculate_power(row['hours']), axis=1)
+		print(self.power_readings['power'])
 		pass
 
-	def power_formula(self, hour):
+	def create_daily_power_readings_old_hardcoded(self):
+		self.power_readings['power'] = self.power_readings.apply(lambda row: self.calculate_power_old_hardcoded(row['hours']), axis=1)
+		print(self.power_readings['power'])
+		pass
+
+	def calculate_power(self, hour):
+		power_value = float(0)
+		for cindex, crow in self.power_config.iterrows():
+			if (hour >= crow['start_hour']) and (hour <= crow['end_hour']):
+				power_baseline = crow['power_value_watts']
+				power_value = float(np.random.randint(power_baseline*(1-TOLERANCE),power_baseline*(1+TOLERANCE)))
+		return power_value
+		pass
+
+	def calculate_power_old_hardcoded(self, hour):
 		'''
 		This should be re-written using processing DataFrames between power_config and the initialized power_readings
 		'''
@@ -82,6 +90,7 @@ class Daily_Power(object):
 		elif (hour == 23):
 			baseline = 500
 		power_value = float(np.random.randint(baseline*(1-TOLERANCE),baseline*(1+TOLERANCE)))
+		###df.apply(lambda x: x + np.random.uniform(50))
 		return(power_value)
 
 	def __str__(self):
